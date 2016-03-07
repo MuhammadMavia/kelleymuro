@@ -1,0 +1,54 @@
+<ion-view view-title="{{ProductMeta.title}}">
+
+  <ion-content>
+
+    <!-- image carousel -->
+    <div ng-switch="status.loadingImages">
+      <div ng-switch-when="true" class="center">
+        <ion-spinner></ion-spinner>
+      </div>
+      <div ng-switch-when="false">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+          <ion-slide ng-repeat="(imageKey, image) in ProductImages">
+            <img  ng-src="{{image}}">
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+    </div>
+
+    <!-- product description and actions -->
+    <div ng-switch="status.loadingMeta">
+      <div ng-switch-when="true" class="center">
+        Loading meta..
+      </div>
+      <div ng-switch-when="false">
+
+        <h2>{{ProductMeta.summary}} - ${{ProductMeta.price}}</h2>
+        <h3>{{ProductMeta.categoryId}}</h3>
+        <!-- -->
+
+        <div class="row item">
+          <div class="col text-center">
+            <button class="button button-dark" ng-click="addToCart(productId)">
+              +
+            </button>
+            <button class="button button-dark" ng-click="removeOneFromCart(productId)">
+              -
+            </button>
+          </div>
+          <div class="col text-center">
+            <button class="button button-stable" ng-click="goToCart()">
+              Cart ({{Cart.items[productId] || 0}})
+            </button>
+          </div>
+        </div>
+
+        <p class="item item-text-wrap">{{ProductMeta.description}}</p> <!-- add markdown-->
+
+
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

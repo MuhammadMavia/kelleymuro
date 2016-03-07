@@ -1,0 +1,90 @@
+/*
+  Pardon me for not using SASS. I might do this in the upcoming releases.
+*/
+
+button {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  border-radius: 10px !important;
+}
+button.button-small {
+  font-size: 10px !important;
+}
+.cicon {
+  font-size: 18px !important
+}
+.spinner-small svg {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+span.tab {
+  margin-right: 30px;
+}
+
+.line-top {
+  border-top: 1px solid #DDD;
+}
+
+.menu-custom {
+  background: #444 !important;
+}
+.menu-item-custom {
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+}
+.item-image img {
+  height: 350px !important;
+  width: auto !important;
+}
+
+div.title.title-center.header-item, h1.title, h1#category-title {
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+}
+h2 {
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  color: #515151 !important;
+  padding: 5px 20px;
+  text-align: center;
+  margin: auto;
+}
+h3 {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  color: #515151 !important;
+  padding: 5px 20px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.item-divider {
+  background: #f0f0f0 !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  color: #444 !important;
+}
+.item-note {
+  text-transform: none !important;
+  letter-spacing: 1px !important;
+}
